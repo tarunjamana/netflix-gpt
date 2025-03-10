@@ -17,6 +17,10 @@ If you are developing a production application, we recommend using TypeScript an
 - configured tailwind into our app
 - configured jest into our app using vitest
 - also installed  "@testing-library/jest-dom" and "@testing-library/react
+- Header
+- Login Form
+- Sign Up form
+
 
 # Features
 - Login/Singup 
