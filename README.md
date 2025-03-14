@@ -17,9 +17,19 @@ If you are developing a production application, we recommend using TypeScript an
 - configured tailwind into our app
 - configured jest into our app using vitest
 - also installed  "@testing-library/jest-dom" and "@testing-library/react
+- Routing
 - Header
 - Login Form
 - Sign Up form
+- Form Validation
+- useRef Hook
+- Firebase Setup
+- Deploy app to production
+- Create SignUp User account
+- Implement SignIn user Api
+- Created redux store with user slice
+-
+
 
 
 # Features
