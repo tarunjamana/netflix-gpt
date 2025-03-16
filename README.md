@@ -28,7 +28,15 @@ If you are developing a production application, we recommend using TypeScript an
 - Create SignUp User account
 - Implement SignIn user Api
 - Created redux store with user slice
--
+- Implemented Signout
+- Update Profile
+- BugFix - Sign up user displayName and profile picture update
+- BugFix - If the user is not logged in  Redirect / browse to login Page and vice versa
+- unsubscribe to the onAuthStatusChanged callback
+- Add hardcoded values to the constant files
+- Register for TMDB, create app , get api access token
+- get data from TMDB now playing movies list api
+
 
 
 

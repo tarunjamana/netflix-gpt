@@ -3,15 +3,14 @@ import Header from "./Header";
 import { checkValidData } from "../utils/validate";
 import { createUserWithEmailAndPassword ,signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { BG_IMAGE , AVATAR_IMAGE } from "../utils/constants";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
 
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const email = useRef(null);
@@ -42,7 +41,7 @@ const Login = () => {
         .then((userCredential) => {
           updateProfile(userCredential.user, {
             displayName: fullName.current.value,
-            photoURL: "https://avatars.githubusercontent.com/u/41354942?v=4"
+            photoURL: AVATAR_IMAGE
           }).then(() => {
             // Get fresh user data after profile update
             const {uid, email, displayName, photoURL} = auth.currentUser;
@@ -52,7 +51,6 @@ const Login = () => {
               displayName,
               photoURL
             }));
-            navigate("/browse");
           }).catch((error) => {
             setErrorMessage(error.message);
           });
@@ -74,7 +72,6 @@ const Login = () => {
             displayName,
             photoURL
           }));
-          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -90,7 +87,7 @@ const Login = () => {
       <div className="absolute w-full h-screen">
         <img
           className="w-full h-screen object-cover"
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/04ef06cc-5f81-4a8e-8db0-6430ba4af286/web/IN-en-20250224-TRIFECTA-perspective_3a9c67b5-1d1d-49be-8499-d179f6389935_large.jpg"
+          src={BG_IMAGE}
           alt="background"
         />
       </div>
