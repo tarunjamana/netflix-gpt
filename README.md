@@ -47,6 +47,10 @@ If you are developing a production application, we recommend using TypeScript an
 - Movies Card
 - custom hooks to retrieve data for popular, upcoming and top rated movies
 - display all movie lists in the  secondary component
+- GPT Search Bar
+- GPT Search Page
+- Multi lang feature for gpt search bar
+- GPT search feature 
 
 
 
